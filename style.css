@@ -151,7 +151,7 @@ h1, h2, h3 {
 .right-panel p {
 	font-size: 17px;
 	color: #444;
-	max-width: 700px;
+	max-width: 900px;
 }
 
 
@@ -180,7 +180,7 @@ h1, h2, h3 {
 
 
 /* ===================== RESPONSIVE ===================== */
-@media (max-width: 900px) {
+/* @media (max-width: 900px) {
 	.about-wrapper {
 		flex-direction: column;
 		text-align: center;
@@ -197,5 +197,54 @@ h1, h2, h3 {
 
 	.nav-right a {
 		margin-left: 15px;
+	}
+} */
+
+/* ===================== MOBILE FIX ===================== */
+@media (max-width: 900px) {
+
+	/* prevent horizontal scroll */
+	html, body {
+		overflow-x: hidden;
+	}
+
+	/* the wrapper should scale to screen width */
+	.about-wrapper {
+		width: 100%;
+		max-width: 100%;
+		padding: 0 15px;
+		flex-direction: column;
+		gap: 40px;
+	}
+
+	/* sidebar becomes full width */
+	.left-panel {
+		flex: none;
+		width: 100%;
+		text-align: center;
+	}
+
+	.profile-pic {
+		margin: 0 auto;
+	}
+
+	/* right panel fills full width */
+	.right-panel {
+		width: 100%;
+		flex: none;
+	}
+
+	/* navigation looks cleaner on mobile */
+	.nav-container {
+		width: 100%;
+		max-width: 100%;
+		padding: 10px 15px;
+		gap: 20px;
+		flex-wrap: wrap;
+	}
+
+	.nav-right a {
+		margin-left: 0;
+		margin-right: 15px;
 	}
 }

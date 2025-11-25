@@ -201,50 +201,72 @@ h1, h2, h3 {
 } */
 
 /* ===================== MOBILE FIX ===================== */
+/* ===================== MOBILE FIX (FULL RESPONSIVE VERSION) ===================== */
 @media (max-width: 900px) {
 
-	/* prevent horizontal scroll */
+	/* lock the page to viewport width */
 	html, body {
 		overflow-x: hidden;
+		margin: 0;
+		padding: 0;
+		width: 100%;
 	}
 
-	/* the wrapper should scale to screen width */
-	.about-wrapper {
+	/* navigation responsive layout */
+	.nav-container {
 		width: 100%;
 		max-width: 100%;
-		padding: 0 15px;
+		padding: 10px 15px;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 15px;
+	}
+
+	.nav-left {
+		font-size: 18px;
+		flex: 1 1 100%;
+	}
+
+	.nav-right {
+		flex: 1 1 100%;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 15px;
+	}
+
+	.nav-right a {
+		margin: 0;
+		font-size: 15px;
+	}
+
+	/* MAIN LAYOUT */
+	.about-wrapper {
+		display: flex;
 		flex-direction: column;
+		width: 100%;
+		max-width: 100%;
+		padding: 0 20px;
 		gap: 40px;
 	}
 
-	/* sidebar becomes full width */
 	.left-panel {
-		flex: none;
 		width: 100%;
 		text-align: center;
+		flex: none;
 	}
 
-	.profile-pic {
-		margin: 0 auto;
+	.left-panel img {
+		margin: auto;
 	}
 
-	/* right panel fills full width */
 	.right-panel {
 		width: 100%;
 		flex: none;
 	}
 
-	/* navigation looks cleaner on mobile */
-	.nav-container {
-		width: 100%;
-		max-width: 100%;
-		padding: 10px 15px;
-		gap: 20px;
-		flex-wrap: wrap;
-	}
-
-	.nav-right a {
-		margin-left: 0;
-		margin-right: 15px;
+	.profile-pic {
+		width: 150px;
+		height: 150px;
 	}
 }
+
